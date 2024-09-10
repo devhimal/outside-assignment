@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #012a22;
+  --font-family: sans-serif;
+  --heading-color: #065545;
+  --navbar-color: #222222;
+  --button-color: #febf58;
+  --bg-color: #012a22;
+  --section-title-font-size: 48px;
+  --card-title-font-size: 32px;
+}
