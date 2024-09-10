@@ -1,0 +1,33 @@
+@import url("/src/styles/variables.css");
+
+#test {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+  height: 165px;
+  z-index: 999;
+  opacity: 30%
+}
+
+#test img {
+  height: 130px;
+  /* border: 1px solid red; */
+}
+
+#test ul {
+  display: flex;
+  gap: 50px;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: Space Mono;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+  color: var(--navbar-color);
+}
+
+#test ul li{
+    list-style: none;
+}

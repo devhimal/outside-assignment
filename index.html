@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Hello Himal</h2>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outside</title>
+    <link rel="stylesheet" type="text/css" href="src/styles/styles.css" />
+
+    <style></style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div class="heroSection">
+      <div>
+        <h1>Title</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1498s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      </div>
+    </div>
+
+    <!-- Blog Posts Section -->
+    <div class="blogSection">
+      <div class="sectionTitle">
+        <h1>Title</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      </div>
+
+      <div class="blogWrapper">
+        <div>
+          <div class="content">
+            <h2>What is Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
+            </p>
+            <button href="">
+              <img src="/public/assets//icons//nextarrow.png" alt="nothing" />
+            </button>
+          </div>
+          <img src="/public//assets/image1.png" alt="" />
+        </div>
+
+        <div  class="blog1">
+          <div class="content">
+            <h2>What is Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
+            </p>
+            <button href="">
+              <img src="/public/assets//icons//nextarrow.png" alt="nothing" />
+            </button>
+          </div>
+          <img src="/public//assets/image1.png" alt="" />
+        </div>
+
+        <div class="blog1">
+          <div class="content">
+            <h2>What is Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
+            </p>
+            <button href="" >
+              <img src="/public/assets//icons//nextarrow.png" alt="nothing" />
+            </button>
+          </div>
+          <img src="/public//assets/image1.png" alt="" />
+        </div>
+
+       
+      </div>
+    </div>
+<!-- Video section -->
+    <div>
+      
+    </div>
+
+    <script>
+      function loadComponent(url, elementId) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading component:", error));
+      }
+
+      loadComponent("/src/components/Navbar/Navbar.html", "header");
+      // loadComponent('footer.html', 'footer');
+    </script>
+  </body>
 </html>
