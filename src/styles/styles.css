@@ -1,22 +1,28 @@
 @import url("variables.css");
+
+
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   font-family: var(--font-family);
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
 body {
-  height: 100%;
-  width: 100vw;
   position: relative;
+  border: 3px solid blue;
   /* overflow: hidden; */
 }
 
 .heroSection {
-  /* border: 2px solid red; */
-  width: 100vw;
+  border: 2px solid red;
+  width: 100%;
   height: 100vh;
-  /* position: absolute; */
   margin-top: -165px;
   top: 0px;
   background-image: url("/public//assets/background.png");
@@ -67,10 +73,16 @@ body {
   height: fit-content;
   max-width: 1300px;
   margin: auto;
+  border: 2px solid red;
 }
 
 .blogSection .sectionTitle {
   padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: fit-content;
+  /* border: 2px solid red; */
 }
 
 .blogSection .sectionTitle h1 {
@@ -85,15 +97,17 @@ body {
 
 .blogSection .sectionTitle p {
   font-family: Space Mono;
+  /* border: 2px solid red; */
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0.01em;
   text-align: left;
-  width: 1076px;
-  height: 84px;
+  /* width: 1076px; */
+  height: fit-content;
   top: 1134px;
   left: 152px;
+  margin-top: 20px;
   gap: 0px;
   opacity: 0px;
   color: #3d3d3d;
@@ -110,6 +124,7 @@ body {
 .blogWrapper .blog1 {
   position: relative;
   border-left: 1px solid transparent;
+  /* border: 1px solid red; */
 }
 
 .blogWrapper .blog1::before {
@@ -130,10 +145,11 @@ body {
   padding: 30px;
 }
 
-.blogWrapper div img {
+.blogWrapper div .blogImg {
   width: 100%;
   object-fit: cover;
   padding-right: 0px 0 0px 0px;
+  /* border: 2px solid blue; */
 }
 
 .blogWrapper div h2 {
@@ -176,6 +192,7 @@ body {
   align-items: center;
   margin-bottom: 60px;
 }
+
 
 .blogWrapper button:hover {
   padding: 11px 28px;
@@ -355,4 +372,65 @@ video::-webkit-media-controls {
 
 video::-moz-media-controls {
   display: none !important;
+}
+
+@media screen and (max-width:1300px) {
+  .heroSection div{
+    margin-left: 50px;
+  }
+  .blogSection{
+    width: 100%;
+    padding: 0px 50px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .heroSection div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 40px;
+    margin-left: 0px;
+    width: 100%;
+  }
+.heroSection div p{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.blogSection .sectionTitle {
+  padding: 30px;
+  margin-bottom: 40px;
+  height: 400px;
+  /* margin-left: 0px; */
+}
+
+
+   .blogWrapper{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blogWrapper .blog1{
+    border-left: none;
+  }
+  .blogWrapper .blog1::before{
+    background: transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blogWrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blogWrapper div .blogImg{
+    height: 500px ;
+    width: 100%;
+  }
+
+  .blogSection .sectionTitle{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
