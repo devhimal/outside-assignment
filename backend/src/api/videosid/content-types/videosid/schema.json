@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videostd",
+  "info": {
+    "singularName": "videosid",
+    "pluralName": "videostd",
+    "displayName": "videos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "video_name": {
+      "type": "string"
+    },
+    "video_url": {
+      "type": "string",
+      "required": true
+    },
+    "icons_url": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "banner_url": {
+      "type": "string"
+    }
+  }
+}
