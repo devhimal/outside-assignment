@@ -36,6 +36,18 @@ Ensure that you have the following installed:
    npm install or yarn 
    ```
 
+4. Create .env file and add these files "
+      HOST=0.0.0.0
+      PORT=1337
+      APP_KEYS=JCIRSkrMRAZCf9DyeEFPtg==,uOxcpb7CiANNNDHsyt6dPg==,djJXw2oBIPtekJmQ28ZlWA==,R9YV7Xk/sFdUGstFzqhN3Q==
+      API_TOKEN_SALT=mwl3wvvpXCk2Dd+wXDzkgg==
+      ADMIN_JWT_SECRET=AMHzJn3nC4+BlYFYoWKNqA==
+      TRANSFER_TOKEN_SALT=GqxSfEtIS6yd/QyFrdSoXw==
+      # Database
+      DATABASE_CLIENT=sqlite
+      DATABASE_FILENAME=.tmp/data.db
+      JWT_SECRET=ypBhQqQMVtcFVDxACToseA==
+
 ### Running the Backend
 
 To start the backend using Strapi, run one of the following commands based on your needs:
