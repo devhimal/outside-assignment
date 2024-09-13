@@ -1,6 +1,6 @@
 # Assignments Repository
-
-This repository contains various assignments that utilize Strapi for backend logic and JavaScript, HTML, and CSS for the frontend.
+I attempted to deploy the site on GitHub, but due to the custom backend I've built for it, I couldn't get it to work online. I would really appreciate it if you could check the project on your local machine. It's lightweight and should take less than two minutes to set up. Thank you so much in advance for your time and help!, 
+Please,follow the steps to run the project on your local  machine
 
 ## Technologies Used
 
