@@ -50,3 +50,15 @@ To start the backend using Strapi, run one of the following commands based on yo
 ### Running the Frontend
 
 To see the frontend, simply open the `.html` file in your browser. It will display the frontend results.
+
+
+### Results
+## Home Page
+# 1. 
+![Project Preview](./public/results/result1.png)
+# 2.
+![Project Preview](./public/results/result2.png)
+3. 
+![Project Preview](./public/results/result3.png)
+4. 
+![Project Preview](./public/results/result.png)
