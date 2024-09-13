@@ -3,22 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/src//styles//Navbar/navbar.css" type="text/css"/>
+    <title>Navbar</title>
+    <link
+      rel="stylesheet"
+      href="/src/styles/Navbar/navbar.css"
+      type="text/css"
+    />
   </head>
-  <body style="position: relative;">
-    <nav id="test"> 
-        <header>
-            <img src="../../../public/assets//logo.png" alt="logo">
-        </header>
-        <ul>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Team</li>
-            <li>Career</li>
-            <li>Contact</li>
-        </ul>
+  <body style="position: relative">
+    <nav id="test">
+      <header>
+        <img src="/public/assets/logo.png" alt="logo" />
+        <div class="hamburger" id="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </header>
+
+      <ul id="nav__link" class="nav__link">
+        <button class="closebutton" id="closebutton">X</button>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Team</li>
+        <li>Career</li>
+        <li>Contact</li>
+      </ul>
     </nav>
-   
+
   </body>
 </html>

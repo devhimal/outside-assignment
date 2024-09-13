@@ -8,7 +8,8 @@
   padding: 0px 50px;
   height: 165px;
   z-index: 999;
-  opacity: 30%
+  opacity: 30%;
+  position: relative;
 }
 
 #test img {
@@ -26,8 +27,117 @@
   line-height: 27px;
   text-align: left;
   color: var(--navbar-color);
+  /* display: none; */
 }
 
-#test ul li{
-    list-style: none;
+#test ul li {
+  list-style: none;
+
+}
+
+#test ul:hover{
+  cursor: pointer;
+}
+
+#test header .hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+
+#test header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#test .hamburger .line {
+  /* border: 1px solid red; */
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #5f624f;
+  z-index: 999;
+}
+
+.closebutton {
+  /* border: 2px solid red; */
+  font-size: 30px;
+  display: none;
+  text-align: end;
+}
+.closebutton span {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.closebutton .closeLink:first-child {
+  transform: rotate(-140deg);
+}
+.closebutton .closeLink:nth-of-type(2) {
+  transform: rotate(140deg);
+}
+
+@media screen and (max-width: 968px) {
+  #test {
+    opacity: 100%;
+  }
+
+  #test ul li:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+
+  #test ul li:first-child:hover {
+    background-color: transparent;
+  }
+
+  .nav__link {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    margin-top: calc(100vh * 0.76);
+    left: -100%;
+    display: flex;
+    padding: 50px 0px;
+    flex-direction: column;
+    background-color: white;
+    flex-direction: column;
+
+    transition: left 1s ease;
+  }
+
+  .nav__link.show {
+    left: 0%;
+  }
+
+  #test header .hamburger {
+    display: block;
+  }
+  #test header .hamburger:hover {
+    cursor: pointer;
+  }
+
+  .closebutton {
+    display: block;
+    font-size: 30px;
+  }
+
+  ul li {
+    width: 80%;
+    padding: 20px;
+    margin: 0px 50px;
+    text-align: start;
+    border-radius: 8px;
+  }
 }

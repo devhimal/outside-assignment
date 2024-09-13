@@ -1,11 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const hamburger = document.getElementById("hamburger");
+    const navLink = document.getElementById("nav__link");
+    const close = document.getElementById("closebutton");
+    const body = document.body;
+
+    if (hamburger === null || navLink === null || close === null) {
+      console.log("One or more elements are null");
+      return;
+    }
+
+    hamburger.addEventListener("click", () => {
+      navLink.classList.add("show");
+      body.classList.add("no-scroll");
+    });
+
+    close.addEventListener("click", () => {
+      navLink.classList.remove("show");
+      body.classList.remove("no-scroll");
+    });
+  }, 300);
+});
+
 document.addEventListener("DOMContentLoaded", async function () {
   try {
     const headers = {
-      'Authorization': 'Bearer f2de6a202cd9dd9b65c97c2c46e92c12ebbbaa1d0d56ce82e4441fe84042d77fd98e1946f120625fb7a526cc4477202e3c177f1b3b4e701f686956409d12ebc8e0bacd5d2d11d9e93797c5b4162d59d2a725d79927ea81105b287322700e4ed0509fb75bf1418fc5b48da8ab3b1c68dc13bc99f267d46c7ad1232a8b1e7cc646'
+      Authorization:
+        "Bearer f2de6a202cd9dd9b65c97c2c46e92c12ebbbaa1d0d56ce82e4441fe84042d77fd98e1946f120625fb7a526cc4477202e3c177f1b3b4e701f686956409d12ebc8e0bacd5d2d11d9e93797c5b4162d59d2a725d79927ea81105b287322700e4ed0509fb75bf1418fc5b48da8ab3b1c68dc13bc99f267d46c7ad1232a8b1e7cc646",
     };
-    const response = await fetch('http://localhost:1337/api/videostd', { headers: headers }); // Ensure you use the correct port and route
+    const response = await fetch("http://localhost:1337/api/videostd", {
+      headers: headers,
+    }); // Ensure you use the correct port and route
     const videos = await response.json();
-    
+
     const videoContainer = document.getElementById("videoWrapper");
 
     if (!videoContainer) {
@@ -44,7 +71,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Add click event listener for the play/pause button
       playPauseBtn.addEventListener("click", () => {
         if (videoTag.paused) {
-          // If another video is playing, pause it
           if (currentPlayingVideo && currentPlayingVideo !== videoTag) {
             currentPlayingVideo.pause();
             currentPlayingVideo.nextElementSibling.classList.remove("pause");
@@ -52,12 +78,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           // Play the clicked video
           videoTag.play();
-          playPauseBtn.classList.add("pause"); // Change to pause icon
-          currentPlayingVideo = videoTag; // Update the currently playing video
+          playPauseBtn.classList.add("pause");
+          currentPlayingVideo = videoTag;
         } else {
           // Pause the video if it's already playing
           videoTag.pause();
-          playPauseBtn.classList.remove("pause"); // Change back to play icon
+          playPauseBtn.classList.remove("pause");
           currentPlayingVideo = null;
         }
       });

@@ -14,9 +14,7 @@ html, body {
 }
 
 body {
-  position: relative;
-  /* border: 3px solid blue; */
-  /* overflow: hidden; */
+  position: relative
 }
 
 .heroSection {
@@ -506,3 +504,6 @@ video::-moz-media-controls {
   padding: 10px 0px;
 }
 }
+
+body.no-scroll {
+  overflow: hidden; }
