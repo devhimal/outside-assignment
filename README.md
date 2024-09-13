@@ -27,7 +27,7 @@ Ensure that you have the following installed:
 2. Navigate to the project directory:
 
    ```bash
-   cd outside-assignment
+   cd outside-assignment and cd backend
    ```
 
 3. Install the necessary dependencies:
