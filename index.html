@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Outside</title>
     <link rel="stylesheet" type="text/css" href="src/styles/styles.css" />
-    <style></style>
+    <link rel="stylesheet" href="/src/styles/Navbar/navbar.css" />
   </head>
-  <body>
-    <div id="header"></div>
+  <body style="position: relative">
+    <div id="header">
+      <nav id="test">
+        <header>
+          <img src="/public/assets/logo.png" alt="logo" />
+          <div class="hamburger" id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </header>
+
+        <ul id="nav__link" class="nav__link">
+          
+          <li class="closebutton" id="closebutton">
+            <span class="closeLink"></span>
+            <span class="closeLink"></span>
+          </li>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Team</li>
+          <li>Career</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
     <div class="heroSection">
       <div>
         <h1>Title</h1>
@@ -44,7 +68,7 @@
               <img src="/public/assets//icons//nextarrow.png" alt="nothing" />
             </button>
           </div>
-          <img src="/public//assets/image1.png" alt="" class="blogImg"/>
+          <img src="/public//assets/image1.png" alt="" class="blogImg" />
         </div>
 
         <div class="blog1">
@@ -70,7 +94,7 @@
               <img src="/public/assets//icons//nextarrow.png" alt="nothing" />
             </button>
           </div>
-          <img src="/public//assets/image1.png" alt="" class="blogImg"/>
+          <img src="/public//assets/image1.png" alt="" class="blogImg" />
         </div>
       </div>
     </div>
@@ -79,9 +103,10 @@
       <div>
         <h1>Title</h1>
         <div id="videoWrapper"></div>
+
         <div class="footerWrapper" style="background-color: white">
           <div class="socialIconsWrapper">
-            <img src="/public//assets/logo.png" alt="logo" />
+            <img src="/public//assets/logo.png" alt="logo" class="logo" />
             <div>
               <a href="">
                 <img src="/public//assets/icons/linkedin.png" alt="facebook"
@@ -121,7 +146,7 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
       function loadComponent(url, elementId) {
         fetch(url)
           .then((response) => response.text())
@@ -133,7 +158,7 @@
 
       loadComponent("/src/components/Navbar/Navbar.html", "header");
       // loadComponent('footer.html', 'footer');
-    </script>
+    </script> -->
 
     <script src="/src/js/scripts.js"></script>
   </body>
